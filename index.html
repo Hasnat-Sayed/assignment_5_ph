@@ -1,21 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
     <title>Emergency Hotline</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <!-- tailwind cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- font awsome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- navbar  -->
+      <nav class="container mx-auto p-6 md:flex justify-between items-center">
+        <div
+          class="text-center md:text-left md:flex md:justify-start md:items-center"
+        >
+          <div class="h-[50px] w-[50px] mx-auto">
+            <img src="./assets/logo.png" alt="" />
+          </div>
+          <div class="mb-[15px] md:my-0">
+            <h2
+              class="roboto-font text-xl font-extrabold text-[#006747] ml-0 md:ml-[10px]"
+            >
+              Emergency <br />
+              Service
+            </h2>
+          </div>
+        </div>
 
-</head>
-<body>
-    <h1>hello</h1>
-</body>
+        <!-- menu -->
+        <div class="menus flex justify-center gap-2 md:gap-5 md:justify-end">
+          <div class="menu-love flex py-3 px-6 rounded-[50px] bg-[#41ff6b1a]">
+            <p class="inter-font text-[1rem] font-black" id="hearts-counter">
+              0
+            </p>
+            <img
+              src="./assets/heart.png"
+              class="h-[26px] w-[26px] ml-[10px]"
+              alt=""
+            />
+          </div>
+          <div class="menu-coin flex py-3 px-6 rounded-[50px] bg-[#41ff6b1a]">
+            <p class="inter-font text-[1rem] font-black" id="coin-counter">
+              100
+            </p>
+            <img
+              src="./assets/coin.png"
+              class="h-[24px] w-[24px] ml-[10px]"
+              alt=""
+            />
+          </div>
+          <div
+            class="menu-copy flex items-center py-3 px-6 rounded-[50px] bg-[#00A63E]"
+          >
+            <p
+              class="inter-font text-[1rem] font-semibold text-white"
+              id="copy-counter"
+            >
+              0
+            </p>
+            <p
+              class="ml-[10px] inter-font text-[1rem] font-semibold text-white"
+            >
+              Copy
+            </p>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner section  -->
+      <section
+        class="banner bg-gradient-to-r from-[#013223] form-[0%] via-[#006747] via-[49.99%] to-[#013223] to-100% py-5"
+      >
+        <div class="banner-content text-center mx-[30px] md:mx-0">
+          <div class="banner-image w-[100px] mx-auto">
+            <img src="./assets/logo.png" alt="" />
+          </div>
+          <div class="banner-heading">
+            <h1
+              class="hind-madurai-regular text-3xl md:text-[40px] text-white font-semibold my-3"
+            >
+              জরুরি সেবা ডিরেক্টরি
+            </h1>
+          </div>
+          <div class="banner-description">
+            <p
+              class="hind-madurai-regular text-[14px] md:text-[20px] text-white font-semibold"
+            >
+              Government Emergency Services at Your Fingertip – A Project by
+              Government of the People’s Republic of Bangladesh
+            </p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    
+  </body>
 </html>
