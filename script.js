@@ -1,33 +1,48 @@
-//copy button functionality
+
 document.getElementById("main-cards-container").addEventListener("click", function (event) {
-    let copyBtn = event.target.closest(".copy-button");
-    console.log(copyBtn)
+
+    //copy button functionality
+    const copyBtn = event.target.closest(".copy-button");
+
     if (copyBtn) {
-        let copyCounter = Number(document.getElementById("copy-counter").innerText),
-            copyNumber = copyBtn.closest(".single-card").querySelector(".single-card-content h2").innerText,
-            newCopy = copyCounter + 1;
+        const copyCounter = Number(document.getElementById("copy-counter").innerText);
+        const copyNumber = copyBtn.closest(".single-card").querySelector(".single-card-content h2").innerText;
+        const newCopy = copyCounter + 1;
+
         document.getElementById("copy-counter").innerText = newCopy;
+
         alert(`আপনি ${copyNumber} নম্বরটি কপি করেছেন`);
+
         navigator.clipboard.writeText(copyNumber);
     }
-});
 
-//call button functionality
-document.getElementById("main-cards-container").addEventListener("click", function (event) {
-    let callBtn = event.target.closest(".call-button");
+
+    //heart button functionality
+    if(event.target.closest(".heart-icon")){
+        const heartCount = Number(document.getElementById("hearts-counter").innerText);
+        const newHeartCount = heartCount + 1 ;
+        document.getElementById("hearts-counter").innerText = newHeartCount;  
+    }
+
+
+
+    //call button functionality
+    const callBtn = event.target.closest(".call-button");
     if (callBtn) {
-        let card = callBtn.closest(".single-card"),
-            cardName = card.querySelector(".single-card-content h1").innerText,
-            cardNumber = card.querySelector(".single-card-content h2").innerText,
-            coinCounter = Number(document.getElementById("coin-counter").innerText),
-            time = new Date().toLocaleTimeString(),
-            newCoinCounter = coinCounter - 20;
+        const card = callBtn.closest(".single-card");
+        const cardName = card.querySelector(".single-card-content h1").innerText;
+        const cardNumber = card.querySelector(".single-card-content h2").innerText;
+        const coinCounter = Number(document.getElementById("coin-counter").innerText);
+        const time = new Date().toLocaleTimeString();
+        const newCoinCounter = coinCounter - 20;
 
         if (coinCounter < 20) {
             alert("❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে ২০ কয়েন লাগবে।");
             return;
         }
+
         document.getElementById("coin-counter").innerText = newCoinCounter;
+
         alert(`📞 ${cardName} এর ${cardNumber} নম্বরে কল করা হচ্ছে...`);
 
         let historySection = document.getElementById("history-section");
@@ -43,6 +58,13 @@ document.getElementById("main-cards-container").addEventListener("click", functi
                 </div>
             </div>
         `;
+
         historySection.appendChild(div);
     }
 });
+
+
+//clear button functionality
+document.getElementById("clear-button").addEventListener("click", function(event){
+    document.getElementById("history-section").innerHTML = "";
+})
